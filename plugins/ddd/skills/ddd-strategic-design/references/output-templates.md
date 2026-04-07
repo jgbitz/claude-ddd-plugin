@@ -1,606 +1,606 @@
 # DDD Strategic Design Output Templates
 
-本文件提供三種核心 DDD 戰略設計產出物的標準格式和範例。
+This document provides standard formats and examples for three core DDD
+strategic design artifacts.
 
 ---
 
 ## 1. Bounded Context Analysis
 
-### 目的
-記錄每個 Bounded Context 的職責、邊界、以及與其他 Context 的關係。
+### Purpose
 
-### 格式
+Document each Bounded Context's responsibilities, boundaries, and relationships
+with other Contexts.
+
+### Format
 
 ```markdown
-# Bounded Context: [Context 名稱]
+# Bounded Context: [Context Name]
 
-## 概述
-[1-2 段描述這個 Context 的核心職責和存在理由]
+## Overview
+[1-2 paragraphs describing this Context's core responsibilities and reason for existence]
 
-## 業務能力
-- [此 Context 提供的核心業務能力 1]
-- [此 Context 提供的核心業務能力 2]
-- [此 Context 提供的核心業務能力 3]
+## Business Capabilities
+- [Core business capability 1 provided by this Context]
+- [Core business capability 2 provided by this Context]
+- [Core business capability 3 provided by this Context]
 
-## 領域分類
-- **類型**: Core Domain / Supporting Subdomain / Generic Subdomain
-- **戰略重要性**: High / Medium / Low
-- **複雜度**: High / Medium / Low
+## Domain Classification
+- **Type**: Core Domain / Supporting Subdomain / Generic Subdomain
+- **Strategic Importance**: High / Medium / Low
+- **Complexity**: High / Medium / Low
 
-## Ubiquitous Language (核心術語)
-| 術語 | 定義 | 備註 |
-|------|------|------|
-| [術語 1] | [在此 Context 中的精確定義] | [與其他 Context 的差異或特殊說明] |
-| [術語 2] | [在此 Context 中的精確定義] | [與其他 Context 的差異或特殊說明] |
+## Ubiquitous Language (Core Terms)
+| Term     | Definition                               | Notes                                              |
+| -------- | ---------------------------------------- | -------------------------------------------------- |
+| [Term 1] | [Precise definition within this Context] | [Differences from other Contexts or special notes] |
+| [Term 2] | [Precise definition within this Context] | [Differences from other Contexts or special notes] |
 
-## 核心實體與聚合
-- **[聚合名稱 1]**: [簡述聚合根和主要實體]
-- **[聚合名稱 2]**: [簡述聚合根和主要實體]
+## Core Entities and Aggregates
+- **[Aggregate Name 1]**: [Brief description of aggregate root and main entities]
+- **[Aggregate Name 2]**: [Brief description of aggregate root and main entities]
 
-## 關鍵領域事件
-- [領域事件 1]: [發生時機和意義]
-- [領域事件 2]: [發生時機和意義]
+## Key Domain Events
+- [Domain Event 1]: [When it occurs and its significance]
+- [Domain Event 2]: [When it occurs and its significance]
 
-## 邊界與職責
-### 包含的職責
-- [明確屬於此 Context 的職責 1]
-- [明確屬於此 Context 的職責 2]
+## Boundaries and Responsibilities
+### Included Responsibilities
+- [Responsibility clearly belonging to this Context 1]
+- [Responsibility clearly belonging to this Context 2]
 
-### 排除的職責 (不負責)
-- [明確不屬於此 Context 的職責 1]
-- [明確不屬於此 Context 的職責 2]
+### Excluded Responsibilities (Not Responsible For)
+- [Responsibility clearly not belonging to this Context 1]
+- [Responsibility clearly not belonging to this Context 2]
 
-## 對外整合點
-| 整合對象 | 整合方式 | 資料流向 | 說明 |
-|----------|----------|----------|------|
-| [其他 Context] | [ACL/OHS/etc] | [雙向/單向] | [整合目的和內容] |
+## External Integration Points
+| Integration Target | Integration Method | Data Flow Direction            | Description                          |
+| ------------------ | ------------------ | ------------------------------ | ------------------------------------ |
+| [Other Context]    | [ACL/OHS/etc]      | [Bidirectional/Unidirectional] | [Purpose and content of integration] |
 
-## 團隊與所有權
-- **負責團隊**: [團隊名稱]
-- **主要聯絡人**: [姓名/角色]
-- **決策權**: [此 Context 的設計決策由誰負責]
+## Team and Ownership
+- **Responsible Team**: [Team name]
+- **Primary Contact**: [Name/Role]
+- **Decision Authority**: [Who is responsible for design decisions in this Context]
 
-## 技術考量
-- **主要技術棧**: [程式語言、框架]
-- **資料儲存**: [資料庫類型]
-- **部署方式**: [獨立服務 / 模組 / 函式庫]
+## Technical Considerations
+- **Primary Tech Stack**: [Programming language, framework]
+- **Data Storage**: [Database type]
+- **Deployment Model**: [Independent service / Module / Library]
 
-## 演化歷史與未來規劃
-- **當前狀態**: [現況描述]
-- **已知問題**: [技術債或設計問題]
-- **未來規劃**: [預期的變化或改善方向]
+## Evolution History and Future Plans
+- **Current State**: [Current situation description]
+- **Known Issues**: [Technical debt or design issues]
+- **Future Plans**: [Expected changes or improvement directions]
 ```
 
-### 範例
+### Example
 
 ```markdown
-# Bounded Context: Order Management (訂單管理)
+# Bounded Context: Order Management
 
-## 概述
-Order Management Context 負責處理客戶訂單的完整生命週期，從訂單建立、驗證、到履行協調。這是電商平台的核心 Context，直接影響營收和客戶體驗。
+## Overview
+The Order Management Context handles the complete lifecycle of customer orders, from order creation, validation, through fulfillment coordination. This is the e-commerce platform's core Context, directly impacting revenue and customer experience.
 
-## 業務能力
-- 接收和驗證客戶訂單
-- 計算訂單總價 (含稅、折扣、運費)
-- 協調庫存預留和付款處理
-- 追蹤訂單狀態和進度
-- 處理訂單修改和取消
+## Business Capabilities
+- Receive and validate customer orders
+- Calculate order totals (including tax, discounts, shipping)
+- Coordinate inventory reservation and payment processing
+- Track order status and progress
+- Handle order modifications and cancellations
 
-## 領域分類
-- **類型**: Core Domain
-- **戰略重要性**: High
-- **複雜度**: High
+## Domain Classification
+- **Type**: Core Domain
+- **Strategic Importance**: High
+- **Complexity**: High
 
-## Ubiquitous Language (核心術語)
-| 術語 | 定義 | 備註 |
-|------|------|------|
-| Order (訂單) | 客戶購買意圖的正式記錄，包含商品、數量、價格和配送資訊 | 不同於 Cart (購物車)，Order 代表已承諾的交易 |
-| Order Line (訂單項目) | 訂單中的單一商品項目，包含 SKU、數量、單價 | 可獨立取消或退貨 |
-| Order Status (訂單狀態) | 訂單當前所處的階段 | 可能的值: Pending, Confirmed, Shipped, Delivered, Cancelled |
-| Fulfillment (履行) | 完成訂單的實體流程，包含撿貨、包裝、出貨 | 由 Warehouse Context 負責實際執行 |
+## Ubiquitous Language (Core Terms)
+| Term         | Definition                                                                                                     | Notes                                                              |
+| ------------ | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Order        | A formal record of a customer's purchase intent, including items, quantities, prices, and delivery information | Different from Cart — an Order represents a committed transaction  |
+| Order Line   | A single item entry in an order, containing SKU, quantity, and unit price                                      | Can be independently cancelled or returned                         |
+| Order Status | The current stage of the order in its lifecycle                                                                | Possible values: Pending, Confirmed, Shipped, Delivered, Cancelled |
+| Fulfillment  | The physical process of completing an order, including picking, packing, and shipping                          | Actual execution is handled by the Warehouse Context               |
 
-## 核心實體與聚合
-- **Order Aggregate**: Order (聚合根)、OrderLine、ShippingAddress、BillingAddress
-- **Pricing Aggregate**: Price、Discount、TaxRate
+## Core Entities and Aggregates
+- **Order Aggregate**: Order (aggregate root), OrderLine, ShippingAddress, BillingAddress
+- **Pricing Aggregate**: Price, Discount, TaxRate
 
-## 關鍵領域事件
-- OrderPlaced: 訂單建立時發布，觸發庫存預留和付款流程
-- OrderConfirmed: 付款成功後發布，觸發履行流程
-- OrderCancelled: 訂單取消時發布，釋放已預留資源
+## Key Domain Events
+- OrderPlaced: Published when an order is created; triggers inventory reservation and payment processes
+- OrderConfirmed: Published after successful payment; triggers the fulfillment process
+- OrderCancelled: Published when an order is cancelled; releases reserved resources
 
-## 邊界與職責
-### 包含的職責
-- 訂單資料的完整性和一致性
-- 訂單狀態的生命週期管理
-- 訂單相關的業務規則驗證
-- 訂單事件的發布
+## Boundaries and Responsibilities
+### Included Responsibilities
+- Order data integrity and consistency
+- Order status lifecycle management
+- Order-related business rule validation
+- Order event publishing
 
-### 排除的職責 (不負責)
-- 實際的庫存扣減 (由 Inventory Context 負責)
-- 付款交易處理 (由 Payment Context 負責)
-- 物流配送執行 (由 Warehouse Context 負責)
-- 商品資訊維護 (由 Catalog Context 負責)
+### Excluded Responsibilities (Not Responsible For)
+- Actual inventory deduction (handled by Inventory Context)
+- Payment transaction processing (handled by Payment Context)
+- Logistics and shipping execution (handled by Warehouse Context)
+- Product information maintenance (handled by Catalog Context)
 
-## 對外整合點
-| 整合對象 | 整合方式 | 資料流向 | 說明 |
-|----------|----------|----------|------|
-| Inventory Context | Event-Driven | 雙向 | 請求庫存預留，接收庫存確認 |
-| Payment Context | ACL | 單向 (Order→Payment) | 發起付款請求 |
-| Warehouse Context | OHS | 單向 (Order→Warehouse) | 下達履行指令 |
-| Catalog Context | ACL | 單向 (Order→Catalog) | 查詢商品資訊和價格 |
+## External Integration Points
+| Integration Target | Integration Method | Data Flow Direction              | Description                                                   |
+| ------------------ | ------------------ | -------------------------------- | ------------------------------------------------------------- |
+| Inventory Context  | Event-Driven       | Bidirectional                    | Request inventory reservation, receive inventory confirmation |
+| Payment Context    | ACL                | Unidirectional (Order→Payment)   | Initiate payment requests                                     |
+| Warehouse Context  | OHS                | Unidirectional (Order→Warehouse) | Issue fulfillment instructions                                |
+| Catalog Context    | ACL                | Unidirectional (Order→Catalog)   | Query product information and prices                          |
 
-## 團隊與所有權
-- **負責團隊**: 交易核心團隊 (Transaction Core Team)
-- **主要聯絡人**: Alice Chen (Tech Lead)
-- **決策權**: 訂單領域模型由交易核心團隊決策，需與產品團隊協調業務需求
+## Team and Ownership
+- **Responsible Team**: Transaction Core Team
+- **Primary Contact**: Alice Chen (Tech Lead)
+- **Decision Authority**: Order domain model decisions are made by the Transaction Core Team, coordinating business requirements with the product team
 
-## 技術考量
-- **主要技術棧**: Java 17, Spring Boot, PostgreSQL
-- **資料儲存**: PostgreSQL (交易資料), Redis (快取)
-- **部署方式**: 獨立微服務，容器化部署
+## Technical Considerations
+- **Primary Tech Stack**: Java 17, Spring Boot, PostgreSQL
+- **Data Storage**: PostgreSQL (transactional data), Redis (cache)
+- **Deployment Model**: Independent microservice, containerized deployment
 
-## 演化歷史與未來規劃
-- **當前狀態**: 已上線運行 2 年，穩定支援日均 10 萬筆訂單
-- **已知問題**: 訂單修改邏輯過於複雜，有重構需求
-- **未來規劃**: 考慮引入 Event Sourcing 來更好地追蹤訂單變更歷史
+## Evolution History and Future Plans
+- **Current State**: In production for 2 years, stably handling ~100K orders per day
+- **Known Issues**: Order modification logic is overly complex; refactoring needed
+- **Future Plans**: Considering Event Sourcing to better track order change history
 ```
 
 ---
 
-## 2. Context Map (上下文映射圖)
+## 2. Context Map
 
-### 目的
-視覺化展示 Bounded Contexts 之間的關係和整合模式。
+### Purpose
 
-### Context Mapping Patterns (關係模式)
+Visually represent the relationships and integration patterns between Bounded
+Contexts.
 
-#### 團隊協作模式
-- **Partnership (夥伴關係)**: 兩個團隊緊密合作，共同演化
-- **Shared Kernel (共享核心)**: 兩個 Context 共享部分領域模型
-- **Customer-Supplier (客戶-供應商)**: 下游團隊依賴上游團隊提供的介面
+### Context Mapping Patterns
 
-#### 獨立演化模式
-- **Conformist (遵從者)**: 下游完全接受上游的模型，無議價能力
-- **Anticorruption Layer (防腐層 - ACL)**: 下游建立轉換層來隔離上游影響
-- **Open Host Service (開放主機服務 - OHS)**: 上游提供標準化的公開 API
-- **Published Language (公開語言)**: 使用行業標準格式 (如 JSON Schema)
+#### Team Collaboration Patterns
 
-#### 特殊模式
-- **Separate Ways (分道揚鑣)**: 兩個 Context 完全獨立，無整合
-- **Big Ball of Mud (大泥球)**: 混亂無邊界的遺留系統
+- **Partnership**: Two teams collaborate closely and co-evolve
+- **Shared Kernel**: Two Contexts share part of the domain model
+- **Customer-Supplier**: The downstream team depends on interfaces provided by the upstream team
 
-### 文字格式
+#### Independent Evolution Patterns
+
+- **Conformist**: Downstream fully accepts the upstream model with no negotiating power
+- **Anticorruption Layer (ACL)**: Downstream builds a translation layer to isolate upstream influence
+- **Open Host Service (OHS)**: Upstream provides a standardized public API
+- **Published Language**: Uses industry-standard formats (e.g., JSON Schema)
+
+#### Special Patterns
+
+- **Separate Ways**: Two Contexts are completely independent with no integration
+- **Big Ball of Mud**: A chaotic legacy system with no clear boundaries
+
+### Text Format
 
 ```markdown
-# Context Map: [系統名稱]
+# Context Map: [System Name]
 
 ## Contexts Overview
 
 ### [Context A]
-- **類型**: Core Domain
-- **團隊**: [團隊名稱]
+- **Type**: Core Domain
+- **Team**: [Team name]
 
 ### [Context B]
-- **類型**: Supporting Subdomain
-- **團隊**: [團隊名稱]
+- **Type**: Supporting Subdomain
+- **Team**: [Team name]
 
 ## Context Relationships
 
-### [Context A] → [Context B]: [關係模式]
-- **方向**: A 依賴 B / B 依賴 A / 雙向依賴
-- **整合方式**: REST API / Event Bus / Shared Database / RPC
-- **資料流**: [什麼資料在兩者間流動]
-- **說明**: [為什麼選擇這種關係模式]
+### [Context A] → [Context B]: [Relationship Pattern]
+- **Direction**: A depends on B / B depends on A / Bidirectional dependency
+- **Integration Method**: REST API / Event Bus / Shared Database / RPC
+- **Data Flow**: [What data flows between them]
+- **Rationale**: [Why this relationship pattern was chosen]
 
-### [Context B] ← [Context C]: [關係模式]
-- **方向**: ...
-- **整合方式**: ...
-- **資料流**: ...
-- **說明**: ...
+### [Context B] ← [Context C]: [Relationship Pattern]
+- **Direction**: ...
+- **Integration Method**: ...
+- **Data Flow**: ...
+- **Rationale**: ...
 ```
 
-### 圖形格式 (Mermaid)
+### Diagram Format (Mermaid)
 
 ```mermaid
 graph TB
     subgraph "Core Domain"
         OrderMgmt[Order Management]
     end
-    
+
     subgraph "Supporting Subdomains"
         Inventory[Inventory]
         Payment[Payment]
         Warehouse[Warehouse]
     end
-    
+
     subgraph "Generic Subdomains"
         Notification[Notification]
         Catalog[Catalog]
     end
-    
+
     OrderMgmt -->|ACL| Payment
     OrderMgmt -->|Event-Driven| Inventory
     OrderMgmt -->|OHS| Warehouse
     OrderMgmt -->|ACL| Catalog
     Warehouse -->|Partnership| Inventory
     OrderMgmt -.->|Conformist| Notification
-    
+
     classDef core fill:#f96,stroke:#333,stroke-width:4px
     classDef supporting fill:#9cf,stroke:#333,stroke-width:2px
     classDef generic fill:#cfc,stroke:#333,stroke-width:1px
-    
+
     class OrderMgmt core
     class Inventory,Payment,Warehouse supporting
     class Notification,Catalog generic
 ```
 
-### 範例
+### Example
 
 ```markdown
 # Context Map: E-Commerce Platform
 
 ## Contexts Overview
 
-### Order Management (訂單管理)
-- **類型**: Core Domain
-- **團隊**: Transaction Core Team
-- **職責**: 訂單生命週期管理
+### Order Management
+- **Type**: Core Domain
+- **Team**: Transaction Core Team
+- **Responsibility**: Order lifecycle management
 
-### Inventory (庫存管理)
-- **類型**: Supporting Subdomain
-- **團隊**: Supply Chain Team
-- **職責**: 庫存追蹤和預留
+### Inventory
+- **Type**: Supporting Subdomain
+- **Team**: Supply Chain Team
+- **Responsibility**: Inventory tracking and reservation
 
-### Payment (付款處理)
-- **類型**: Supporting Subdomain
-- **團隊**: Payment Team
-- **職責**: 金流處理和對帳
+### Payment
+- **Type**: Supporting Subdomain
+- **Team**: Payment Team
+- **Responsibility**: Payment processing and reconciliation
 
-### Warehouse (倉儲管理)
-- **類型**: Supporting Subdomain
-- **團隊**: Operations Team
-- **職責**: 訂單履行和物流
+### Warehouse
+- **Type**: Supporting Subdomain
+- **Team**: Operations Team
+- **Responsibility**: Order fulfillment and logistics
 
-### Catalog (商品目錄)
-- **類型**: Generic Subdomain
-- **團隊**: Content Team
-- **職責**: 商品資訊管理
+### Catalog
+- **Type**: Generic Subdomain
+- **Team**: Content Team
+- **Responsibility**: Product information management
 
-### Notification (通知服務)
-- **類型**: Generic Subdomain
-- **團隊**: Platform Team
-- **職責**: 郵件、簡訊、推播通知
+### Notification
+- **Type**: Generic Subdomain
+- **Team**: Platform Team
+- **Responsibility**: Email, SMS, and push notifications
 
 ## Context Relationships
 
-### Order Management → Inventory: Event-Driven (事件驅動)
-- **方向**: 雙向依賴
-- **整合方式**: Message Queue (RabbitMQ)
-- **資料流**: 
-  - Order→Inventory: InventoryReservationRequested 事件
-  - Inventory→Order: InventoryReserved / InventoryUnavailable 事件
-- **說明**: 使用事件驅動確保庫存預留的非同步處理，避免阻塞訂單建立流程
+### Order Management → Inventory: Event-Driven
+- **Direction**: Bidirectional dependency
+- **Integration Method**: Message Queue (RabbitMQ)
+- **Data Flow**:
+  - Order→Inventory: InventoryReservationRequested event
+  - Inventory→Order: InventoryReserved / InventoryUnavailable event
+- **Rationale**: Event-driven approach ensures asynchronous inventory reservation processing, avoiding blocking the order creation flow
 
-### Order Management → Payment: Anticorruption Layer (防腐層)
-- **方向**: Order 依賴 Payment
-- **整合方式**: REST API with ACL
-- **資料流**: 付款請求和結果查詢
-- **說明**: Payment Context 的模型較複雜且經常變動，使用 ACL 隔離變化，Order Context 內部使用簡化的付款模型
+### Order Management → Payment: Anticorruption Layer (ACL)
+- **Direction**: Order depends on Payment
+- **Integration Method**: REST API with ACL
+- **Data Flow**: Payment requests and result queries
+- **Rationale**: The Payment Context model is complex and changes frequently; the ACL isolates these changes so the Order Context uses a simplified internal payment model
 
-### Order Management → Warehouse: Open Host Service (開放主機服務)
-- **方向**: Order 依賴 Warehouse
-- **整合方式**: Warehouse 提供標準化 REST API
-- **資料流**: 履行指令 (Fulfillment Order)
-- **說明**: Warehouse 作為多個上游 Context 的服務提供者，提供穩定的公開介面
+### Order Management → Warehouse: Open Host Service (OHS)
+- **Direction**: Order depends on Warehouse
+- **Integration Method**: Warehouse provides a standardized REST API
+- **Data Flow**: Fulfillment instructions (Fulfillment Order)
+- **Rationale**: Warehouse serves as a provider for multiple upstream Contexts, offering a stable public interface
 
-### Order Management → Catalog: Anticorruption Layer (防腐層)
-- **方向**: Order 依賴 Catalog
-- **整合方式**: GraphQL API with ACL
-- **資料流**: 商品資訊查詢 (價格、庫存狀態)
-- **說明**: Catalog 的資料模型面向內容管理，與 Order 的交易模型不同，使用 ACL 轉換
+### Order Management → Catalog: Anticorruption Layer (ACL)
+- **Direction**: Order depends on Catalog
+- **Integration Method**: GraphQL API with ACL
+- **Data Flow**: Product information queries (prices, inventory status)
+- **Rationale**: Catalog's data model is content-management oriented, different from Order's transactional model; the ACL handles the translation
 
-### Warehouse ↔ Inventory: Partnership (夥伴關係)
-- **方向**: 雙向緊密協作
-- **整合方式**: Direct API calls + Shared Events
-- **資料流**: 實體庫存變動、撿貨確認
-- **說明**: 兩個團隊共同負責實體庫存的準確性，需要緊密協作和共同演化
+### Warehouse ↔ Inventory: Partnership
+- **Direction**: Bidirectional close collaboration
+- **Integration Method**: Direct API calls + Shared Events
+- **Data Flow**: Physical inventory changes, picking confirmations
+- **Rationale**: Both teams share responsibility for physical inventory accuracy and need to collaborate closely and co-evolve
 
-### Order Management → Notification: Conformist (遵從者)
-- **方向**: Order 依賴 Notification
-- **整合方式**: Event Bus (單向)
-- **資料流**: 訂單狀態通知請求
-- **說明**: Notification 是通用服務，Order 接受其定義的事件格式，不需要轉換層
+### Order Management → Notification: Conformist
+- **Direction**: Order depends on Notification
+- **Integration Method**: Event Bus (unidirectional)
+- **Data Flow**: Order status notification requests
+- **Rationale**: Notification is a generic service; Order accepts its defined event format without needing a translation layer
 
 ## Strategic Decisions
 
-1. **為何 Order 與 Inventory 使用事件驅動？**
-   - 庫存預留可能需要等待，不適合同步 API
-   - 解耦兩個 Context，允許獨立擴展
+1. **Why use event-driven for Order ↔ Inventory?**
+   - Inventory reservation may take time and is not suited for synchronous APIs
+   - Decouples the two Contexts, allowing independent scaling
 
-2. **為何需要多個 ACL？**
-   - Payment 和 Catalog 的模型差異大，直接使用會污染 Order 的領域模型
-   - ACL 提供穩定的內部介面，隔離外部變化
+2. **Why are multiple ACLs needed?**
+   - Payment and Catalog models differ significantly; direct use would pollute the Order domain model
+   - ACLs provide stable internal interfaces, isolating external changes
 
-3. **Warehouse 為何選擇 OHS？**
-   - 多個上游 Context 需要倉儲服務 (Order, Return, Transfer)
-   - 標準化介面降低維護成本
+3. **Why OHS for Warehouse?**
+   - Multiple upstream Contexts need warehouse services (Order, Return, Transfer)
+   - A standardized interface reduces maintenance costs
 ```
 
 ---
 
-## 3. Ubiquitous Language Glossary (統一語言詞彙表)
+## 3. Ubiquitous Language Glossary
 
-### 目的
-記錄整個系統或特定 Bounded Context 內的精確術語定義，確保團隊溝通無歧義。
+### Purpose
 
-### 格式
+Record precise terminology definitions for the entire system or a specific
+Bounded Context, ensuring unambiguous team communication.
+
+### Format
 
 ```markdown
-# Ubiquitous Language: [Context 或系統名稱]
+# Ubiquitous Language: [Context or System Name]
 
-## 如何使用本詞彙表
-- **範圍**: 本詞彙表涵蓋 [具體範圍]
-- **維護**: 由 [負責人/團隊] 維護
-- **更新頻率**: 每當新增或修改術語時立即更新
+## How to Use This Glossary
+- **Scope**: This glossary covers [specific scope]
+- **Maintained by**: [Responsible person/team]
+- **Update frequency**: Updated immediately whenever terms are added or modified
 
 ---
 
-## [分類 1: 例如「核心實體」]
+## [Category 1: e.g., "Core Entities"]
 
-### [術語 1]
-- **英文**: [English Term]
-- **定義**: [清晰、無歧義的定義]
-- **範例**: [實際使用的例子]
-- **關聯術語**: [相關的其他術語]
-- **注意事項**: [常見誤解或與其他 Context 的差異]
+### [Term 1]
+- **English**: [English Term]
+- **Definition**: [Clear, unambiguous definition]
+- **Example**: [Practical usage example]
+- **Related Terms**: [Other related terms]
+- **Notes**: [Common misconceptions or differences from other Contexts]
 
-### [術語 2]
-- **英文**: [English Term]
-- **定義**: ...
+### [Term 2]
+- **English**: [English Term]
+- **Definition**: ...
 
-## [分類 2: 例如「狀態與生命週期」]
+## [Category 2: e.g., "States and Lifecycle"]
 
 ...
 
-## [分類 3: 例如「業務規則與約束」]
+## [Category 3: e.g., "Business Rules and Constraints"]
 
 ...
 ```
 
-### 範例
+### Example
 
 ```markdown
 # Ubiquitous Language: Order Management Context
 
-## 如何使用本詞彙表
-- **範圍**: Order Management Bounded Context 內使用的所有領域術語
-- **維護**: 由 Transaction Core Team 維護
-- **更新頻率**: 每當新增或修改術語時立即更新
-- **版本**: v2.3 (2025-10-20)
+## How to Use This Glossary
+- **Scope**: All domain terms used within the Order Management Bounded Context
+- **Maintained by**: Transaction Core Team
+- **Update frequency**: Updated immediately whenever terms are added or modified
+- **Version**: v2.3 (2025-10-20)
 
 ---
 
-## 核心實體
+## Core Entities
 
-### Order (訂單)
-- **英文**: Order
-- **定義**: 客戶向系統提交的購買承諾，包含一個或多個商品項目、配送資訊、和付款資訊。訂單一旦建立，即產生履行義務。
-- **範例**: "訂單 #ORD-20251020-00123 包含 3 個訂單項目"
-- **關聯術語**: Order Line, Order Status, Fulfillment
-- **注意事項**: 
-  - 不同於 Cart (購物車): Cart 是暫時的、可隨意修改的，Order 是正式的承諾
-  - 不同於 Fulfillment Context 的 "Fulfillment Order": 那是倉儲執行視角，我們的 Order 是交易視角
+### Order
+- **Definition**: A purchase commitment submitted by a customer to the system, containing one or more item entries, delivery information, and payment information. Once created, an order generates a fulfillment obligation.
+- **Example**: "Order #ORD-20251020-00123 contains 3 order lines"
+- **Related Terms**: Order Line, Order Status, Fulfillment
+- **Notes**:
+  - Different from Cart: A Cart is temporary and freely modifiable; an Order is a formal commitment
+  - Different from Fulfillment Context's "Fulfillment Order": that is from the warehouse execution perspective; our Order is from the transaction perspective
 
-### Order Line (訂單項目)
-- **英文**: Order Line / Line Item
-- **定義**: 訂單中的單一商品項目，包含 SKU、數量、單價、和小計。Order Line 是訂單的組成部分,不能獨立存在。
-- **範例**: "訂單項目: SKU-12345 × 2,單價 NT$500,小計 NT$1000"
-- **關聯術語**: Order, SKU, Quantity
-- **注意事項**: 
-  - 可以單獨取消或退貨,但仍屬於父訂單
-  - 價格在 Order Line 建立時鎖定,不受之後的 Catalog 價格變動影響
+### Order Line (Line Item)
+- **Definition**: A single item entry in an order, containing SKU, quantity, unit price, and subtotal. An Order Line is a component of an order and cannot exist independently.
+- **Example**: "Order line: SKU-12345 × 2, unit price $500, subtotal $1,000"
+- **Related Terms**: Order, SKU, Quantity
+- **Notes**:
+  - Can be individually cancelled or returned, but still belongs to the parent order
+  - Price is locked at Order Line creation time and is not affected by subsequent Catalog price changes
 
-### Customer (客戶)
-- **英文**: Customer
-- **定義**: 在系統中下訂單的自然人或法人。在 Order Context 中,我們只關心客戶的識別 (Customer ID) 和聯絡資訊,不處理客戶資料的完整管理。
-- **範例**: "客戶 #CUST-789 下了新訂單"
-- **關聯術語**: Order, Shipping Address, Billing Address
-- **注意事項**: 
-  - 客戶的詳細資料 (會員等級、偏好等) 由 Customer Context 管理
-  - 我們只儲存訂單所需的最小客戶資訊副本
+### Customer
+- **Definition**: A natural person or legal entity that places orders in the system. In the Order Context, we only care about customer identification (Customer ID) and contact information; we do not handle complete customer data management.
+- **Example**: "Customer #CUST-789 placed a new order"
+- **Related Terms**: Order, Shipping Address, Billing Address
+- **Notes**:
+  - Detailed customer data (membership tier, preferences, etc.) is managed by the Customer Context
+  - We only store a minimal copy of customer information needed for the order
 
 ---
 
-## 狀態與生命週期
+## States and Lifecycle
 
-### Order Status (訂單狀態)
-- **英文**: Order Status
-- **定義**: 訂單在其生命週期中的當前階段。狀態轉換遵循特定的業務規則,不可隨意跳躍。
-- **可能的值**:
-  - `Pending`: 訂單已建立,等待付款確認
-  - `Confirmed`: 付款成功,訂單確認
-  - `Preparing`: 倉儲正在準備出貨
-  - `Shipped`: 已出貨
-  - `Delivered`: 已送達
-  - `Cancelled`: 已取消
-  - `Refunded`: 已退款
-- **範例**: "訂單狀態從 Confirmed 轉換為 Preparing"
-- **關聯術語**: Order, Order Lifecycle, Domain Events
-- **注意事項**: 
-  - 狀態轉換會發布 Domain Events
-  - 某些狀態轉換是不可逆的 (如 Delivered → Pending)
+### Order Status
+- **Definition**: The current stage of an order in its lifecycle. State transitions follow specific business rules and cannot be arbitrarily skipped.
+- **Possible values**:
+  - `Pending`: Order created, awaiting payment confirmation
+  - `Confirmed`: Payment successful, order confirmed
+  - `Preparing`: Warehouse is preparing for shipment
+  - `Shipped`: Has been shipped
+  - `Delivered`: Has been delivered
+  - `Cancelled`: Has been cancelled
+  - `Refunded`: Has been refunded
+- **Example**: "Order status transitioned from Confirmed to Preparing"
+- **Related Terms**: Order, Order Lifecycle, Domain Events
+- **Notes**:
+  - State transitions publish Domain Events
+  - Some state transitions are irreversible (e.g., Delivered → Pending)
 
-### Fulfillment Status (履行狀態)
-- **英文**: Fulfillment Status
-- **定義**: 訂單的實體履行進度,獨立於 Order Status 追蹤。這是從 Warehouse Context 同步過來的資訊。
-- **可能的值**: `NotStarted`, `InProgress`, `Completed`, `Failed`
-- **範例**: "訂單的履行狀態為 InProgress"
-- **關聯術語**: Order Status, Warehouse Context
-- **注意事項**: 
-  - Fulfillment Status 由 Warehouse 控制,我們只讀取
-  - Order Status 和 Fulfillment Status 不一定同步更新
+### Fulfillment Status
+- **Definition**: The physical fulfillment progress of an order, tracked independently from Order Status. This is information synchronized from the Warehouse Context.
+- **Possible values**: `NotStarted`, `InProgress`, `Completed`, `Failed`
+- **Example**: "The order's fulfillment status is InProgress"
+- **Related Terms**: Order Status, Warehouse Context
+- **Notes**:
+  - Fulfillment Status is controlled by Warehouse; we only read it
+  - Order Status and Fulfillment Status do not necessarily update in sync
 
 ---
 
-## 業務規則與約束
+## Business Rules and Constraints
 
-### Order Modification Window (訂單修改時間窗)
-- **英文**: Order Modification Window
-- **定義**: 訂單確認後,客戶可以修改訂單內容的時間限制。超過此時間窗後,修改需要更複雜的流程。
-- **規則**: 訂單確認後 30 分鐘內可自由修改,超過後需客服介入
-- **範例**: "此訂單已超過修改時間窗,無法自動修改"
-- **關聯術語**: Order Status, Order Confirmed
-- **注意事項**: 修改時間窗不適用於取消操作,取消有獨立的規則
+### Order Modification Window
+- **Definition**: The time limit after order confirmation during which a customer can modify order contents. After this window, modifications require a more complex process.
+- **Rule**: Can be freely modified within 30 minutes of order confirmation; after that, customer service intervention is required
+- **Example**: "This order has exceeded the modification window and cannot be automatically modified"
+- **Related Terms**: Order Status, Order Confirmed
+- **Notes**: The modification window does not apply to cancellation operations; cancellation has its own independent rules
 
-### Minimum Order Amount (最低訂單金額)
-- **英文**: Minimum Order Amount / MOA
-- **定義**: 系統接受的訂單總額下限。低於此金額的訂單無法提交。
-- **規則**: 一般客戶最低 NT$100,VIP 客戶無限制
-- **範例**: "訂單金額 NT$80 低於最低訂單金額,無法提交"
-- **關聯術語**: Order Total, Customer Type
-- **注意事項**: 不含運費和手續費
+### Minimum Order Amount (MOA)
+- **Definition**: The minimum order total the system will accept. Orders below this amount cannot be submitted.
+- **Rule**: Regular customers minimum $100; VIP customers have no minimum
+- **Example**: "Order amount of $80 is below the minimum order amount and cannot be submitted"
+- **Related Terms**: Order Total, Customer Type
+- **Notes**: Does not include shipping fees and handling charges
 
-### Inventory Reservation Timeout (庫存預留逾時)
-- **英文**: Inventory Reservation Timeout
-- **定義**: 訂單建立後,系統為其預留庫存的有效時間。超時後,如果訂單仍未付款,預留將被釋放。
-- **規則**: 預留時間為 15 分鐘
-- **範例**: "訂單 #ORD-123 的庫存預留已逾時"
-- **關聯術語**: Order Status, Inventory Context
-- **注意事項**: 逾時後訂單狀態變為 Expired,客戶需要重新下單
+### Inventory Reservation Timeout
+- **Definition**: The duration for which the system reserves inventory after an order is created. If the order is still unpaid after this timeout, the reservation is released.
+- **Rule**: Reservation time is 15 minutes
+- **Example**: "Inventory reservation for Order #ORD-123 has timed out"
+- **Related Terms**: Order Status, Inventory Context
+- **Notes**: After timeout, the order status changes to Expired and the customer needs to place a new order
 
 ---
 
-## 領域事件
+## Domain Events
 
 ### OrderPlaced
-- **英文**: Order Placed Event
-- **定義**: 當客戶成功提交訂單時發布的事件。這是訂單生命週期的起點。
-- **觸發時機**: Order 聚合建立並持久化後
-- **包含資料**: Order ID, Customer ID, Order Lines, Total Amount, Timestamp
-- **訂閱者**: Inventory Context (庫存預留), Payment Context (發起付款), Notification Context (發送確認信)
-- **範例**: `OrderPlaced { orderId: "ORD-123", customerId: "CUST-789", totalAmount: 1500 }`
+- **Definition**: An event published when a customer successfully submits an order. This is the starting point of the order lifecycle.
+- **Trigger**: After the Order aggregate is created and persisted
+- **Payload**: Order ID, Customer ID, Order Lines, Total Amount, Timestamp
+- **Subscribers**: Inventory Context (inventory reservation), Payment Context (initiate payment), Notification Context (send confirmation)
+- **Example**: `OrderPlaced { orderId: "ORD-123", customerId: "CUST-789", totalAmount: 1500 }`
 
 ### OrderConfirmed
-- **英文**: Order Confirmed Event
-- **定義**: 當訂單付款成功,訂單正式確認時發布的事件。
-- **觸發時機**: Payment Context 通知付款成功,Order 狀態更新為 Confirmed 後
-- **包含資料**: Order ID, Payment ID, Confirmed At
-- **訂閱者**: Warehouse Context (開始履行), Notification Context (通知客戶)
-- **範例**: `OrderConfirmed { orderId: "ORD-123", paymentId: "PAY-456", confirmedAt: "2025-10-20T10:30:00Z" }`
+- **Definition**: An event published when order payment succeeds and the order is officially confirmed.
+- **Trigger**: After Payment Context notifies of successful payment and Order status is updated to Confirmed
+- **Payload**: Order ID, Payment ID, Confirmed At
+- **Subscribers**: Warehouse Context (begin fulfillment), Notification Context (notify customer)
+- **Example**: `OrderConfirmed { orderId: "ORD-123", paymentId: "PAY-456", confirmedAt: "2025-10-20T10:30:00Z" }`
 
 ### OrderCancelled
-- **英文**: Order Cancelled Event
-- **定義**: 當訂單被取消時發布的事件,無論是客戶主動取消或系統取消。
-- **觸發時機**: Order 狀態更新為 Cancelled 後
-- **包含資料**: Order ID, Cancellation Reason, Cancelled By, Cancelled At
-- **訂閱者**: Inventory Context (釋放預留), Payment Context (退款處理), Notification Context (通知客戶)
-- **範例**: `OrderCancelled { orderId: "ORD-123", reason: "Customer Request", cancelledBy: "CUST-789" }`
+- **Definition**: An event published when an order is cancelled, whether by the customer or the system.
+- **Trigger**: After Order status is updated to Cancelled
+- **Payload**: Order ID, Cancellation Reason, Cancelled By, Cancelled At
+- **Subscribers**: Inventory Context (release reservation), Payment Context (refund processing), Notification Context (notify customer)
+- **Example**: `OrderCancelled { orderId: "ORD-123", reason: "Customer Request", cancelledBy: "CUST-789" }`
 
 ---
 
-## 值物件 (Value Objects)
+## Value Objects
 
-### Money (金額)
-- **英文**: Money
-- **定義**: 表示貨幣金額的值物件,包含數值和幣別。
-- **屬性**: `amount` (Decimal), `currency` (String, ISO 4217 code)
-- **範例**: `Money { amount: 1500.00, currency: "TWD" }`
-- **注意事項**: 
-  - 金額計算必須考慮精度,使用 Decimal 而非 Float
-  - 不同幣別不可直接相加,需要匯率轉換
+### Money
+- **Definition**: A value object representing a monetary amount, including a numeric value and currency.
+- **Properties**: `amount` (Decimal), `currency` (String, ISO 4217 code)
+- **Example**: `Money { amount: 1500.00, currency: "USD" }`
+- **Notes**:
+  - Monetary calculations must consider precision; use Decimal, not Float
+  - Amounts in different currencies cannot be directly added; currency conversion is required
 
-### Address (地址)
-- **英文**: Address
-- **定義**: 表示實體地址的值物件,用於配送和帳單地址。
-- **屬性**: 
-  - `recipientName`: 收件人姓名
-  - `phone`: 聯絡電話
-  - `postalCode`: 郵遞區號
-  - `city`: 城市
-  - `district`: 區域
-  - `street`: 街道地址
-  - `details`: 詳細資訊 (樓層、門牌等)
-- **範例**: 
+### Address
+- **Definition**: A value object representing a physical address, used for shipping and billing addresses.
+- **Properties**:
+  - `recipientName`: Recipient name
+  - `phone`: Contact phone number
+  - `postalCode`: Postal/ZIP code
+  - `city`: City
+  - `district`: District/Area
+  - `street`: Street address
+  - `details`: Additional details (floor, unit number, etc.)
+- **Example**:
   ```
+
   Address {
-    recipientName: "張小明",
-    phone: "0912-345-678",
-    postalCode: "100",
-    city: "台北市",
-    district: "中正區",
-    street: "重慶南路一段 122 號",
-    details: "3 樓"
+    recipientName: "John Smith",
+    phone: "555-123-4567",
+    postalCode: "10001",
+    city: "New York",
+    district: "Manhattan",
+    street: "122 Broadway",
+    details: "3rd Floor"
   }
-  ```
-- **注意事項**: 
-  - Address 是 immutable,任何修改都會產生新的 Address 實例
-  - 驗證邏輯包含郵遞區號和城市的一致性檢查
+
+```text
+- **Notes**:
+  - Address is immutable; any modification produces a new Address instance
+  - Validation logic includes postal code and city consistency checks
 
 ---
 
-## 跨 Context 術語對照
+## Cross-Context Terminology Mapping
 
-某些術語在不同 Context 中有不同含義,需要特別注意:
+Some terms have different meanings in different Contexts and require special
+attention:
 
-| Order Context | Inventory Context | 說明 |
-|---------------|-------------------|------|
-| Order | Reservation Request | Order 觸發庫存預留請求 |
-| Order Line | Reserved Item | 每個 Order Line 對應一筆庫存預留 |
-| Confirmed | Committed | Order 確認對應庫存的正式扣減 |
+| Order Context | Inventory Context   | Description                                                  |
+| ------------- | ------------------- | ------------------------------------------------------------ |
+| Order         | Reservation Request | An Order triggers an inventory reservation request           |
+| Order Line    | Reserved Item       | Each Order Line corresponds to one inventory reservation     |
+| Confirmed     | Committed           | Order confirmation corresponds to formal inventory deduction |
 
-| Order Context | Warehouse Context | 說明 |
-|---------------|-------------------|------|
-| Order | Fulfillment Order | 訂單轉為履行指令 |
-| Shipped | Out for Delivery | 狀態名稱不同但意義相近 |
+| Order Context | Warehouse Context | Description                                          |
+| ------------- | ----------------- | ---------------------------------------------------- |
+| Order         | Fulfillment Order | An order is converted into a fulfillment instruction |
+| Shipped       | Out for Delivery  | Different status names but similar meaning           |
 
-| Order Context | Payment Context | 說明 |
-|---------------|-------------------|------|
-| Order Total | Payment Amount | 金額概念相同,但 Payment 還包含手續費 |
-| Order Confirmed | Payment Captured | 確認時機相同,視角不同 |
+| Order Context   | Payment Context  | Description                                                      |
+| --------------- | ---------------- | ---------------------------------------------------------------- |
+| Order Total     | Payment Amount   | Same monetary concept, but Payment also includes processing fees |
+| Order Confirmed | Payment Captured | Same timing, different perspectives                              |
 
 ---
 
-## 版本歷史
+## Version History
 
-- **v2.3 (2025-10-20)**: 新增 Fulfillment Status,澄清與 Order Status 的差異
-- **v2.2 (2025-09-15)**: 修正 Order Modification Window 規則,從 15 分鐘調整為 30 分鐘
-- **v2.1 (2025-08-01)**: 新增跨 Context 術語對照表
-- **v2.0 (2025-06-01)**: 重大改版,引入 Domain Events 章節
-- **v1.0 (2025-01-01)**: 初版發布
+- **v2.3 (2025-10-20)**: Added Fulfillment Status; clarified difference from Order Status
+- **v2.2 (2025-09-15)**: Updated Order Modification Window rule from 15 minutes to 30 minutes
+- **v2.1 (2025-08-01)**: Added Cross-Context Terminology Mapping table
+- **v2.0 (2025-06-01)**: Major revision; introduced Domain Events section
+- **v1.0 (2025-01-01)**: Initial release
 ```
 
 ---
 
-## 產出物使用指南
+## Output Usage Guide
 
-### 何時產出這些文件？
+### When to Produce These Documents
 
-1. **Bounded Context Analysis**: 
-   - 當識別出新的 Context 時
-   - 當 Context 職責有重大變化時
-   - 作為新團隊成員的 onboarding 材料
+1. **Bounded Context Analysis**:
+   - When a new Context is identified
+   - When a Context's responsibilities undergo significant changes
+   - As onboarding material for new team members
 
-2. **Context Map**: 
-   - 系統架構設計階段
-   - 規劃跨團隊協作時
-   - 重構或服務拆分時
-   - 定期 review (建議每季更新)
+2. **Context Map**:
+   - During system architecture design phase
+   - When planning cross-team collaboration
+   - During refactoring or service decomposition
+   - Periodic review (recommended quarterly updates)
 
-3. **Ubiquitous Language**: 
-   - 項目啟動時建立初版
-   - 持續更新,任何術語變更都要記錄
-   - 用於解決團隊溝通誤解時
+3. **Ubiquitous Language**:
+   - Create the initial version at project kickoff
+   - Continuously update; record any terminology changes
+   - Use to resolve team communication misunderstandings
 
-### 文件維護原則
+### Document Maintenance Principles
 
-- **Single Source of Truth**: 每個 Context 的分析文件由該 Context 的負責團隊維護
-- **Version Control**: 所有文件應納入版本控制,重大變更要有 changelog
-- **Living Documentation**: 這些不是一次性產出,要隨著系統演化持續更新
-- **Accessibility**: 確保所有相關人員都能輕易存取這些文件
+- **Single Source of Truth**: Each Context's analysis document is maintained by that Context's responsible team
+- **Version Control**: All documents should be under version control; significant changes need a changelog
+- **Living Documentation**: These are not one-time artifacts — they must be continuously updated as the system evolves
+- **Accessibility**: Ensure all relevant stakeholders can easily access these documents
 
-### 輸出格式建議
+### Output Format Recommendations
 
-- **Markdown**: 適合納入版本控制,易於協作編輯
-- **Confluence/Notion**: 適合需要豐富排版和快速分享
-- **Mermaid/PlantUML**: Context Map 的圖形化表達
-- **ADR (Architecture Decision Records)**: 記錄重要的設計決策和權衡
+- **Markdown**: Suitable for version control; easy collaborative editing
+- **Confluence/Notion**: Suitable when rich formatting and quick sharing are needed
+- **Mermaid/PlantUML**: Graphical representation of Context Maps
+- **ADR (Architecture Decision Records)**: Record important design decisions and trade-offs

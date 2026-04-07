@@ -1,136 +1,154 @@
 # Domain Expert Interview Questions
 
-領域專家訪談的目標是挖掘深層的業務規則、術語定義、以及複雜的領域邏輯。這些知識是建立 Ubiquitous Language 和識別 Bounded Context 邊界的關鍵。
+The goal of the domain expert interview is to uncover deep business rules,
+terminology definitions, and complex domain logic. This knowledge is critical
+for building the Ubiquitous Language and identifying Bounded Context boundaries.
 
-## Phase 1: 術語與概念澄清
+## Phase 1: Terminology and Concept Clarification
 
-**目的：建立精確的領域詞彙，發現同名異義或異名同義的情況**
+**Purpose: Establish precise domain vocabulary and discover cases of homonyms or
+synonyms**
 
-1. 在你的工作中，最常用的專業術語有哪些？
-2. [針對特定術語] 這個詞在你的領域中具體是什麼意思？
-3. 有沒有同一個詞在不同情境下意思不一樣的情況？
-4. 有沒有外行人容易誤解的術語？
-5. 有哪些術語是業界標準，哪些是公司內部特有的？
+1. What are the most commonly used professional terms in your work?
+2. [For a specific term] What exactly does this word mean in your domain?
+3. Are there cases where the same word means different things in different contexts?
+4. Are there terms that non-experts commonly misunderstand?
+5. Which terms are industry standard, and which are specific to this company?
 
-**追問技巧：**
-- "你能舉個具體的例子嗎？" - 用實例驗證理解
-- "這個術語和 [另一個相似術語] 有什麼不同？" - 區分細微差異
-- "新人常常會把這個詞理解錯成什麼？" - 找出常見誤區
+**Follow-up techniques:**
 
-## Phase 2: 業務規則與不變條件
+- "Can you give a specific example?" - Validate understanding with examples
+- "How is this term different from [another similar term]?" - Distinguish subtle differences
+- "What do newcomers commonly misunderstand this term to mean?" - Identify common misconceptions
 
-**目的：挖掘核心業務規則、invariants、以及領域約束**
+## Phase 2: Business Rules and Invariants
 
-1. 在你的領域中，有哪些「絕對不能違反」的規則？
-2. 什麼情況下 [某個操作] 是不被允許的？
-3. 如果 [某個規則] 被打破，會發生什麼問題？
-4. 這些規則的來源是什麼？（法規、業務慣例、技術限制？）
-5. 這些規則會改變嗎？什麼情況下會改變？
+**Purpose: Uncover core business rules, invariants, and domain constraints**
 
-**追問技巧：**
-- "為什麼會有這條規則？" - 理解規則背後的原因
-- "這條規則有例外嗎？" - 發現特殊情況
-- "如果不遵守這個規則，誰會受影響？" - 理解影響範圍
+1. In your domain, what rules must "absolutely never be violated"?
+2. Under what circumstances is [a certain operation] not allowed?
+3. If [a certain rule] is broken, what problems occur?
+4. What is the source of these rules? (Regulations, business conventions, technical limitations?)
+5. Can these rules change? Under what circumstances?
 
-## Phase 3: 領域事件與狀態轉換
+**Follow-up techniques:**
 
-**目的：識別關鍵的領域事件，理解實體的生命週期和狀態機**
+- "Why does this rule exist?" - Understand the reasoning behind the rule
+- "Does this rule have exceptions?" - Discover special cases
+- "Who is affected if this rule is not followed?" - Understand the impact scope
 
-1. 在你的日常工作中，有哪些重要的「事情發生了」的時刻？
-2. 當 [某個事件] 發生時，接下來通常會發生什麼？
-3. [某個實體] 會經歷哪些狀態？如何從一個狀態轉換到另一個？
-4. 什麼情況下狀態轉換會失敗？
-5. 有哪些事件是需要立即通知其他人或系統的？
+## Phase 3: Domain Events and State Transitions
 
-**追問技巧：**
-- "這個事件可以被撤銷嗎？" - 理解可逆性
-- "這個事件的發生順序重要嗎？" - 識別時序約束
-- "如果這個事件沒有被記錄會怎樣？" - 理解事件的重要性
+**Purpose: Identify key domain events and understand entity lifecycles and state
+machines**
 
-## Phase 4: 計算與決策邏輯
+1. In your daily work, what are the important "something happened" moments?
+2. When [a certain event] occurs, what typically happens next?
+3. What states does [a certain entity] go through? How does it transition from one state to another?
+4. Under what circumstances does a state transition fail?
+5. Which events require immediate notification to other people or systems?
 
-**目的：理解複雜的計算公式、評分機制、或決策流程**
+**Follow-up techniques:**
 
-1. [某個值] 是如何計算出來的？
-2. 在做 [某個決策] 時，你會考慮哪些因素？
-3. 有沒有一些經驗法則或啟發式方法？
-4. 這個計算 / 決策有精確的公式嗎，還是依賴專家判斷？
-5. 什麼情況下計算結果需要人工覆核？
+- "Can this event be reversed?" - Understand reversibility
+- "Does the order of events matter?" - Identify ordering constraints
+- "What happens if this event is not recorded?" - Understand the event's importance
 
-**追問技巧：**
-- "能否用一個具體的例子走一遍計算過程？" - 驗證理解
-- "這個公式中哪些參數最關鍵？" - 識別核心因素
-- "有沒有邊界值或特殊情況需要特別處理？" - 發現邊界條件
+## Phase 4: Calculations and Decision Logic
 
-## Phase 5: 異常情況與邊界案例
+**Purpose: Understand complex formulas, scoring mechanisms, or decision
+processes**
 
-**目的：發現容易被忽略的特殊情況，這些往往揭示了隱藏的複雜度**
+1. How is [a certain value] calculated?
+2. When making [a certain decision], what factors do you consider?
+3. Are there rules of thumb or heuristics?
+4. Does this calculation/decision have a precise formula, or does it rely on expert judgment?
+5. Under what circumstances do calculation results need manual review?
 
-1. 在實際工作中，有哪些「例外情況」需要特殊處理？
-2. 最讓你頭痛的邊界案例是什麼？
-3. 新手最容易在哪裡犯錯？
-4. 有沒有一些「理論上不該發生但實際上會發生」的情況？
-5. 當系統出現錯誤時，你如何判斷和處理？
+**Follow-up techniques:**
 
-**追問技巧：**
-- "這種情況多久會遇到一次？" - 評估頻率
-- "處理這種情況的標準流程是什麼？" - 理解處理機制
-- "如果處理不當會有什麼風險？" - 評估嚴重性
+- "Can you walk through a specific example of the calculation?" - Validate understanding
+- "Which parameters in this formula are most critical?" - Identify core factors
+- "Are there boundary values or special cases that need special handling?" - Discover edge conditions
 
-## Phase 6: 資料與資訊流
+## Phase 5: Exceptions and Edge Cases
 
-**目的：理解資料如何流動，哪些資料是權威來源，哪些是衍生的**
+**Purpose: Discover easily overlooked special situations — these often reveal
+hidden complexity**
 
-1. 這份資料的權威來源 (Source of Truth) 是哪裡？
-2. 這份資料會同步到哪些地方？
-3. 資料的時效性要求是什麼？（即時、近即時、最終一致？）
-4. 如果兩個地方的資料不一致，以哪個為準？
-5. 資料的完整性和準確性如何驗證？
+1. In actual work, what "exceptional situations" require special handling?
+2. What are the most troublesome edge cases?
+3. Where do newcomers most commonly make mistakes?
+4. Are there situations that "theoretically shouldn't happen but actually do"?
+5. When the system encounters an error, how do you diagnose and handle it?
 
-**追問技巧：**
-- "這份資料可以被修改嗎？什麼情況下可以修改？" - 理解可變性
-- "這份資料需要保存多久？" - 理解生命週期
-- "誰有權限存取 / 修改這份資料？" - 理解權限邊界
+**Follow-up techniques:**
 
-## Phase 7: 與其他領域的互動
+- "How often does this situation occur?" - Assess frequency
+- "What is the standard procedure for handling this?" - Understand handling mechanisms
+- "What are the risks if this is handled poorly?" - Assess severity
 
-**目的：識別 Bounded Context 之間的邊界和整合點**
+## Phase 6: Data and Information Flow
 
-1. 你的工作需要和哪些其他部門 / 團隊協作？
-2. 你需要從其他系統獲取哪些資訊？
-3. 你產出的資訊會被誰使用？
-4. 在協作過程中，有沒有遇到「他們用的詞和我們不一樣」的情況？
-5. 跨部門協作時，最常遇到的問題是什麼？
+**Purpose: Understand how data flows, which data is the authoritative source,
+and which is derived**
 
-**追問技巧：**
-- "你們之間是如何交接資訊的？" - 理解整合方式
-- "對方提供的資訊格式符合你的需求嗎？" - 發現適配問題
-- "如果對方的系統出問題，你這邊會受什麼影響？" - 理解耦合度
+1. Where is the authoritative source (Source of Truth) for this data?
+2. Where is this data synchronized to?
+3. What are the timeliness requirements for this data? (Real-time, near real-time, eventually consistent?)
+4. If data in two places is inconsistent, which takes precedence?
+5. How is data completeness and accuracy verified?
 
-## Phase 8: 時間與並發考量
+**Follow-up techniques:**
 
-**目的：理解時間相關的業務規則和並發情況下的處理邏輯**
+- "Can this data be modified? Under what circumstances?" - Understand mutability
+- "How long does this data need to be retained?" - Understand lifecycle
+- "Who has permission to access/modify this data?" - Understand permission boundaries
 
-1. 這個操作有時間限制嗎？（截止日期、有效期限、時效性？）
-2. 如果兩個人同時進行 [某個操作]，會發生什麼？
-3. 歷史資料的處理方式是什麼？需要追溯修改嗎？
-4. 有沒有「生效日期」或「排程執行」的概念？
-5. 時區或營業時間會影響業務邏輯嗎？
+## Phase 7: Interactions with Other Domains
 
-**追問技巧：**
-- "如果操作超過時限會怎樣？" - 理解超時處理
-- "能否回到過去的某個時間點查看狀態？" - 理解歷史追蹤需求
-- "這個操作可以被排程延後執行嗎？" - 理解時序彈性
+**Purpose: Identify boundaries and integration points between Bounded Contexts**
 
-## 訪談後整理重點
+1. Which other departments/teams does your work require collaboration with?
+2. What information do you need from other systems?
+3. Who uses the information you produce?
+4. In collaboration, have you encountered situations where "they use different terms than we do"?
+5. What are the most common problems when collaborating across departments?
 
-根據領域專家訪談，應該能整理出：
+**Follow-up techniques:**
 
-1. **Ubiquitous Language 詞彙表** - 精確定義的領域術語
-2. **核心業務規則清單** - invariants 和約束條件
-3. **領域事件目錄** - 關鍵的業務事件和觸發條件
-4. **狀態機圖** - 重要實體的狀態轉換
-5. **異常處理機制** - 邊界案例和例外情況
-6. **Context 邊界訊號** - 術語衝突、團隊邊界、資料權威來源的差異
+- "How do you hand off information between teams?" - Understand integration methods
+- "Does the information format provided by others meet your needs?" - Discover adaptation issues
+- "If their system has problems, how does that affect your work?" - Understand coupling
 
-記住：領域專家提供的是深度知識，但可能缺乏全局視角。需要與 PM 和用戶訪談結合，才能建立完整的領域理解。
+## Phase 8: Time and Concurrency Considerations
+
+**Purpose: Understand time-related business rules and handling logic under
+concurrent conditions**
+
+1. Does this operation have time constraints? (Deadlines, expiration dates, time sensitivity?)
+2. What happens if two people perform [a certain operation] simultaneously?
+3. How is historical data handled? Does it need retroactive modifications?
+4. Are there concepts of "effective dates" or "scheduled execution"?
+5. Do time zones or business hours affect business logic?
+
+**Follow-up techniques:**
+
+- "What happens if the operation exceeds the time limit?" - Understand timeout handling
+- "Can you go back to a certain point in time to view the state?" - Understand historical tracking needs
+- "Can this operation be scheduled for later execution?" - Understand timing flexibility
+
+## Post-Interview Summary
+
+From the domain expert interview, you should be able to compile:
+
+1. **Ubiquitous Language Glossary** - Precisely defined domain terms
+2. **Core Business Rules List** - Invariants and constraints
+3. **Domain Events Catalog** - Key business events and their trigger conditions
+4. **State Machine Diagrams** - State transitions for important entities
+5. **Exception Handling Mechanisms** - Edge cases and exceptional situations
+6. **Context Boundary Signals** - Terminology conflicts, team boundaries, differences in data authority sources
+
+Remember: Domain experts provide deep knowledge but may lack a global
+perspective. This needs to be combined with PM and user interviews to build a
+complete understanding of the domain.

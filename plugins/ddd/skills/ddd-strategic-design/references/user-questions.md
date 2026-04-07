@@ -1,169 +1,194 @@
 # End User Interview Questions
 
-終端使用者訪談的目標是理解真實的使用情境、工作流程、痛點和期望。使用者的實際操作往往揭示了系統真正需要支援的用例，而非理論上的設計。
+The goal of the end user interview is to understand real usage scenarios,
+workflows, pain points, and expectations. Users' actual operations often reveal
+the use cases the system truly needs to support, rather than the theoretical
+design.
 
-## Phase 1: 背景與脈絡
+## Phase 1: Background and Context
 
-**目的：了解使用者的角色、經驗和使用情境**
+**Purpose: Understand the user's role, experience, and usage context**
 
-1. 能否簡單介紹一下你的工作內容？
-2. 你每天會花多少時間使用這個系統？
-3. 你使用這個系統多久了？
-4. 除了這個系統，你還會用哪些工具來完成工作？
-5. 你是單獨使用，還是需要與團隊協作？
+1. Can you briefly describe your job responsibilities?
+2. How much time do you spend using this system each day?
+3. How long have you been using this system?
+4. Besides this system, what other tools do you use to complete your work?
+5. Do you use it individually, or do you need to collaborate with a team?
 
-**追問技巧：**
-- "你覺得這個系統在你的工作中重要嗎？" - 理解系統定位
-- "如果沒有這個系統，你會怎麼做？" - 了解替代方案
-- "有沒有人教過你怎麼用？還是自己摸索的？" - 理解學習曲線
+**Follow-up techniques:**
 
-## Phase 2: 典型工作流程
+- "Do you consider this system important for your work?" - Understand the system's positioning
+- "What would you do if this system didn't exist?" - Learn about alternatives
+- "Did someone teach you how to use it, or did you figure it out yourself?" - Understand the learning curve
 
-**目的：觀察真實的操作序列，發現用例和任務模式**
+## Phase 2: Typical Workflows
 
-1. 能否示範一下你平常是怎麼使用這個系統的？
-2. 請描述一個你今天實際完成的任務，從頭到尾是怎麼做的？
-3. 這個任務通常需要多長時間？
-4. 完成這個任務需要經過哪些步驟？
-5. 有沒有一些步驟是你覺得可以跳過或簡化的？
+**Purpose: Observe real operation sequences and discover use cases and task
+patterns**
 
-**追問技巧：**
-- "為什麼要這樣操作？" - 理解操作背後的意圖
-- "有沒有其他方法可以達到同樣的目的？" - 發現替代流程
-- "如果這一步出錯，你會怎麼辦？" - 理解錯誤處理
+1. Can you demonstrate how you typically use this system?
+2. Please describe a task you actually completed today, from start to finish.
+3. How long does this task usually take?
+4. What steps are required to complete this task?
+5. Are there steps you feel could be skipped or simplified?
 
-## Phase 3: 痛點與困難
+**Follow-up techniques:**
 
-**目的：識別使用者體驗的瓶頸和挫折點，這些往往指向設計改善的機會**
+- "Why do you do it this way?" - Understand the intent behind operations
+- "Is there another way to achieve the same result?" - Discover alternative workflows
+- "What do you do if this step goes wrong?" - Understand error handling
 
-1. 在使用過程中，什麼地方最讓你感到困擾？
-2. 有沒有經常出錯或需要重做的步驟？
-3. 什麼情況下你會覺得「系統怎麼這麼笨」？
-4. 你最希望改善的功能是什麼？
-5. 有沒有一些「變通方法」(workaround) 你不得不使用？
+## Phase 3: Pain Points and Difficulties
 
-**追問技巧：**
-- "這個問題多久會遇到一次？" - 評估頻率
-- "這個問題會耽誤你多少時間？" - 量化影響
-- "你有向誰反映過這個問題嗎？" - 理解溝通管道
+**Purpose: Identify user experience bottlenecks and frustration points — these
+often point to design improvement opportunities**
 
-## Phase 4: 決策點與判斷
+1. What bothers you most during use?
+2. Are there steps that frequently go wrong or need to be redone?
+3. When do you think "why is the system so dumb"?
+4. What feature would you most like to see improved?
+5. Are there "workarounds" you've had to resort to?
 
-**目的：理解使用者如何做決策，什麼資訊影響他們的選擇**
+**Follow-up techniques:**
 
-1. 在 [某個步驟] 你如何決定要選擇哪個選項？
-2. 你需要哪些資訊來做這個決定？
-3. 有時候會選錯嗎？什麼情況下會選錯？
-4. 做這個決定時，你會考慮哪些因素？
-5. 如果不確定該怎麼選，你會怎麼辦？
+- "How often do you encounter this problem?" - Assess frequency
+- "How much time does this problem cost you?" - Quantify impact
+- "Have you reported this issue to anyone?" - Understand communication channels
 
-**追問技巧：**
-- "系統有沒有給你足夠的資訊來做決策？" - 評估資訊充分性
-- "你希望系統能提供什麼建議或提示？" - 發現輔助需求
-- "有沒有某些選項你從來不會選？為什麼？" - 理解選項的實用性
+## Phase 4: Decision Points and Judgment
 
-## Phase 5: 異常與例外情況
+**Purpose: Understand how users make decisions and what information influences
+their choices**
 
-**目的：發現「不在手冊上」但實際會遇到的情況**
+1. At [a certain step], how do you decide which option to choose?
+2. What information do you need to make this decision?
+3. Do you sometimes choose incorrectly? Under what circumstances?
+4. What factors do you consider when making this decision?
+5. If you're unsure what to choose, what do you do?
 
-1. 有沒有遇過系統無法處理的情況？
-2. 遇到特殊情況時，你是如何處理的？
-3. 什麼情況下你會需要尋求他人協助？
-4. 系統有沒有給過你意外或奇怪的反應？
-5. 有沒有一些「理論上不該這樣做但實際上得這樣做」的操作？
+**Follow-up techniques:**
 
-**追問技巧：**
-- "這種情況常見嗎？" - 評估特殊情況的頻率
-- "你覺得系統應該怎麼處理這種情況？" - 收集改善建議
-- "這種情況對你的工作影響大嗎？" - 評估優先順序
+- "Does the system give you enough information to make the decision?" - Assess information sufficiency
+- "What suggestions or hints would you like the system to provide?" - Discover assistance needs
+- "Are there options you never choose? Why?" - Understand option usefulness
 
-## Phase 6: 協作與溝通
+## Phase 5: Exceptions and Edge Cases
 
-**目的：理解多人協作的模式和資訊交換的需求**
+**Purpose: Discover situations that are "not in the manual" but actually occur**
 
-1. 你的工作成果會交給誰？
-2. 你需要從其他人那裡得到什麼資訊？
-3. 團隊成員之間如何協調工作？
-4. 有沒有需要同時編輯或共同決策的情況？
-5. 如果有衝突或不一致，如何解決？
+1. Have you encountered situations the system can't handle?
+2. How do you deal with special cases?
+3. Under what circumstances do you need to seek help from others?
+4. Has the system ever given you an unexpected or strange response?
+5. Are there operations that "theoretically shouldn't be done this way but have to be"?
 
-**追問技巧：**
-- "你們如何知道對方的進度？" - 理解可見性需求
-- "有沒有遇過「我以為你會做,你以為我會做」的情況？" - 發現協作盲點
-- "系統如何幫助或阻礙你們的協作？" - 評估協作支援
+**Follow-up techniques:**
 
-## Phase 7: 期望與理想狀態
+- "Is this situation common?" - Assess the frequency of special cases
+- "How do you think the system should handle this?" - Collect improvement suggestions
+- "Does this situation have a big impact on your work?" - Assess priority
 
-**目的：理解使用者的願景，這有助於識別真正的需求而非表面要求**
+## Phase 6: Collaboration and Communication
 
-1. 如果可以改變這個系統的一件事，你會改變什麼？
-2. 你理想中的工作流程是什麼樣子？
-3. 有沒有其他系統或工具有你希望這個系統也有的功能？
-4. 如果系統能自動幫你做一件事，你希望是什麼？
-5. 你認為新手使用這個系統最大的障礙是什麼？
+**Purpose: Understand multi-person collaboration patterns and information
+exchange needs**
 
-**追問技巧：**
-- "為什麼這個功能對你很重要？" - 理解深層需求
-- "如果有了這個功能，你的工作會有什麼改變？" - 評估價值
-- "這個改變會不會影響到其他人？" - 考慮連鎖效應
+1. Who receives the output of your work?
+2. What information do you need from other people?
+3. How do team members coordinate their work?
+4. Are there situations requiring simultaneous editing or joint decision-making?
+5. How are conflicts or inconsistencies resolved?
 
-## Phase 8: 頻率與模式
+**Follow-up techniques:**
 
-**目的：量化不同用例的重要性，幫助優先順序決策**
+- "How do you know each other's progress?" - Understand visibility needs
+- "Have you ever encountered a 'I thought you would do it, you thought I would do it' situation?" - Discover collaboration blind spots
+- "How does the system help or hinder your collaboration?" - Assess collaboration support
 
-1. 你最常做的任務是什麼？多久做一次？
-2. 哪些功能你每天都會用？
-3. 哪些功能很少用，但用的時候很關鍵？
-4. 在一天當中，什麼時候最常使用這個系統？
-5. 使用的強度會隨著時間變化嗎？（月初月底、旺季淡季？）
+## Phase 7: Expectations and Ideal State
 
-**追問技巧：**
-- "能給我一個大概的百分比嗎？" - 量化使用分布
-- "這個任務緊急嗎？還是可以慢慢做？" - 理解時效性
-- "如果這個功能變慢了，對你的影響大嗎？" - 評估效能敏感度
+**Purpose: Understand users' vision — this helps identify real needs rather than
+surface-level requests**
 
-## Phase 9: 學習與適應
+1. If you could change one thing about this system, what would it be?
+2. What does your ideal workflow look like?
+3. Are there other systems or tools with features you wish this system had?
+4. If the system could automatically do one thing for you, what would you want it to be?
+5. What do you think is the biggest obstacle for newcomers using this system?
 
-**目的：理解使用者如何學習和適應系統，這影響 UI 設計和訓練需求**
+**Follow-up techniques:**
 
-1. 當初學習使用這個系統時，什麼最難理解？
-2. 現在還有什麼功能你不太會用嗎？
-3. 你有沒有發現一些「早知道」的使用技巧？
-4. 如果要教新人，你會從哪裡開始教？
-5. 系統的哪些部分是「憑直覺」就知道怎麼用的？
+- "Why is this feature important to you?" - Understand deeper needs
+- "If you had this feature, how would your work change?" - Assess value
+- "Would this change affect others?" - Consider ripple effects
 
-**追問技巧：**
-- "你是怎麼學會這個的？" - 理解學習路徑
-- "系統的提示或說明有幫助嗎？" - 評估輔助功能
-- "有沒有一些術語或概念讓你困惑很久？" - 發現溝通障礙
+## Phase 8: Frequency and Patterns
 
-## Phase 10: 觀察而非只是詢問
+**Purpose: Quantify the importance of different use cases to help with
+prioritization decisions**
 
-**重要提醒：真實的使用行為往往與使用者的描述不同**
+1. What is the task you perform most often? How frequently?
+2. Which features do you use every day?
+3. Which features are rarely used, but critical when needed?
+4. What time of day do you most commonly use this system?
+5. Does usage intensity vary over time? (Beginning/end of month, peak/off seasons?)
 
-在訪談過程中，儘可能：
-- **請使用者實際操作** - "能否示範給我看？" 而不只是 "你會怎麼做？"
-- **觀察猶豫和錯誤** - 使用者卡住或選錯的地方往往最有價值
-- **注意非語言訊號** - 皺眉、嘆氣、快速點擊都是痛點的訊號
-- **記錄實際用詞** - 使用者如何稱呼功能和概念
-- **關注繞過的功能** - 使用者刻意不用的功能可能有問題
+**Follow-up techniques:**
 
-## 訪談後整理重點
+- "Can you give me a rough percentage breakdown?" - Quantify usage distribution
+- "Is this task urgent, or can it be done gradually?" - Understand time sensitivity
+- "If this feature became slower, would it significantly impact you?" - Assess performance sensitivity
 
-根據終端使用者訪談，應該能識別：
+## Phase 9: Learning and Adaptation
 
-1. **使用者旅程地圖** - 完整的任務流程和接觸點
-2. **高頻用例** - 最常執行的任務和操作序列
-3. **關鍵痛點** - 影響體驗的主要問題
-4. **實際術語** - 使用者真正使用的詞彙 (vs. 系統或專家用的術語)
-5. **協作模式** - 多人協作的方式和需求
-6. **隱藏需求** - 使用者的變通方法揭示的真實需求
+**Purpose: Understand how users learn and adapt to the system — this affects UI
+design and training needs**
 
-記住：使用者訪談提供的是「系統被如何使用」的真相，而非「系統應該如何使用」的理論。這些洞察需要與 PM 的業務目標和領域專家的規則結合，才能設計出既符合業務又好用的系統。
+1. When you first learned to use this system, what was hardest to understand?
+2. Are there features you still don't know how to use well?
+3. Have you discovered any "I wish I'd known this earlier" usage tips?
+4. If you had to teach a newcomer, where would you start?
+5. Which parts of the system are "intuitively obvious" how to use?
 
-## 跨角色驗證
+**Follow-up techniques:**
 
-將三種訪談結果交叉比對：
-- **PM 說的重要功能，使用者真的常用嗎？** - 驗證業務假設
-- **使用者的痛點，在領域專家眼中是規則問題還是 UI 問題？** - 區分根因
-- **領域專家的術語，使用者真的這樣說嗎？** - 調整 Ubiquitous Language
+- "How did you learn this?" - Understand learning paths
+- "Are the system's prompts or instructions helpful?" - Assess guidance features
+- "Were there terms or concepts that confused you for a long time?" - Discover communication barriers
+
+## Phase 10: Observe, Don't Just Ask
+
+**Important reminder: Actual usage behavior often differs from what users
+describe**
+
+During the interview, whenever possible:
+
+- **Have users actually demonstrate** - "Can you show me?" rather than just "How would you do it?"
+- **Watch for hesitation and errors** - Where users get stuck or choose incorrectly is often the most valuable insight
+- **Note non-verbal cues** - Frowning, sighing, rapid clicking are all signals of pain points
+- **Record actual wording** - How users refer to features and concepts
+- **Pay attention to bypassed features** - Features users deliberately avoid may have problems
+
+## Post-Interview Summary
+
+From the end user interview, you should be able to identify:
+
+1. **User Journey Map** - Complete task flows and touchpoints
+2. **High-Frequency Use Cases** - Most commonly performed tasks and operation sequences
+3. **Key Pain Points** - Major issues affecting the experience
+4. **Actual Terminology** - Words users really use (vs. system or expert terminology)
+5. **Collaboration Patterns** - How multiple people collaborate and their needs
+6. **Hidden Requirements** - Real needs revealed by users' workarounds
+
+Remember: User interviews reveal the truth about "how the system is actually
+used," not the theory of "how the system should be used." These insights need to
+be combined with the PM's business goals and domain expert rules to design a
+system that is both business-aligned and user-friendly.
+
+## Cross-Role Validation
+
+Compare results across all three interview types:
+
+- **Are features the PM considers important actually used frequently by users?** - Validate business assumptions
+- **Are user pain points a rules problem or a UI problem from the domain expert's perspective?** - Distinguish root causes
+- **Do users actually use the terminology that domain experts use?** - Calibrate the Ubiquitous Language

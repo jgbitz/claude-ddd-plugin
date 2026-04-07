@@ -1,90 +1,103 @@
 # Product Manager Interview Questions
 
-產品經理訪談的目標是理解業務目標、優先順序、以及產品策略。這些資訊幫助識別核心域 (Core Domain)、支撐域 (Supporting Subdomain) 和通用域 (Generic Subdomain)。
+The goal of the Product Manager interview is to understand business objectives,
+priorities, and product strategy. This information helps identify the Core
+Domain, Supporting Subdomains, and Generic Subdomains.
 
-## Phase 1: 業務背景與目標
+## Phase 1: Business Background and Goals
 
-**目的：建立業務脈絡，理解為什麼要做這個系統**
+**Purpose: Establish business context and understand why this system is being
+built**
 
-1. 這個產品 / 系統要解決什麼業務問題？
-2. 主要的商業目標是什麼？（營收、效率、用戶體驗？）
-3. 誰是主要的利益相關者？（客戶、內部團隊、合作夥伴？）
-4. 這個系統在公司的整體業務中扮演什麼角色？
-5. 如果這個系統失敗，對業務的影響是什麼？
+1. What business problem does this product/system solve?
+2. What are the main business goals? (Revenue, efficiency, user experience?)
+3. Who are the key stakeholders? (Customers, internal teams, partners?)
+4. What role does this system play in the company's overall business?
+5. If this system fails, what is the impact on the business?
 
-**追問技巧：**
-- "為什麼這個目標很重要？" - 挖掘深層業務價值
-- "有沒有具體的數字目標？" - 理解成功指標
-- "有哪些競爭對手在做類似的事情？" - 了解市場定位
+**Follow-up techniques:**
 
-## Phase 2: 功能優先順序與範圍
+- "Why is this goal important?" - Uncover deeper business value
+- "Are there specific numerical targets?" - Understand success metrics
+- "Are there competitors doing something similar?" - Understand market positioning
 
-**目的：識別核心域，區分必要功能與次要功能**
+## Phase 2: Feature Priorities and Scope
 
-1. 如果只能保留三個功能，你會選擇哪三個？為什麼？
-2. 哪些功能是產品的競爭優勢？
-3. 哪些功能是「必須有」(Must-have)，哪些是「最好有」(Nice-to-have)？
-4. 未來 6-12 個月的產品規劃重點是什麼？
-5. 有哪些功能是你們刻意不做的？為什麼？
+**Purpose: Identify the core domain and distinguish essential features from
+secondary ones**
 
-**追問技巧：**
-- "這個功能對哪類用戶最重要？" - 識別不同用戶群體
-- "如果沒有這個功能會怎樣？" - 測試真實重要性
-- "這個功能的投資報酬率如何評估？" - 理解價值衡量
+1. If you could only keep three features, which three would you choose? Why?
+2. Which features are the product's competitive advantage?
+3. Which features are "must-have" vs. "nice-to-have"?
+4. What are the product roadmap priorities for the next 6-12 months?
+5. Are there features you've deliberately chosen not to build? Why?
 
-## Phase 3: 流程與決策點
+**Follow-up techniques:**
 
-**目的：理解端到端流程，發現關鍵決策點和業務規則**
+- "Which user segment values this feature most?" - Identify different user groups
+- "What happens if this feature doesn't exist?" - Test true importance
+- "How do you measure the ROI of this feature?" - Understand value measurement
 
-1. 能否描述一個典型的用戶旅程？從開始到結束？
-2. 在這個流程中，有哪些關鍵的決策點？
-3. 什麼情況下流程會失敗或需要特殊處理？
-4. 哪些步驟是自動化的？哪些需要人工介入？
-5. 不同部門或團隊在這個流程中如何協作？
+## Phase 3: Processes and Decision Points
 
-**追問技巧：**
-- "這個決策是根據什麼規則做的？" - 挖掘業務規則
-- "有沒有例外情況？" - 發現邊界案例
-- "這個流程通常需要多長時間？" - 理解時間約束
+**Purpose: Understand end-to-end processes and discover key decision points and
+business rules**
 
-## Phase 4: 約束與限制
+1. Can you describe a typical user journey from start to finish?
+2. What are the key decision points in this process?
+3. Under what circumstances does the process fail or require special handling?
+4. Which steps are automated? Which require human intervention?
+5. How do different departments or teams collaborate in this process?
 
-**目的：識別系統邊界、外部依賴和技術 / 業務約束**
+**Follow-up techniques:**
 
-1. 有哪些法規或合規要求必須遵守？
-2. 系統需要與哪些外部系統整合？
-3. 預算和資源的限制是什麼？
-4. 時程上有什麼硬性期限嗎？
-5. 技術上有哪些限制或偏好？
+- "What rules govern this decision?" - Uncover business rules
+- "Are there exceptions?" - Discover edge cases
+- "How long does this process typically take?" - Understand time constraints
 
-**追問技巧：**
-- "這個限制是可以協商的嗎？" - 區分硬性和軟性約束
-- "如果突破這個限制會帶來什麼風險？" - 理解約束的嚴重性
-- "有沒有替代方案？" - 探索彈性空間
+## Phase 4: Constraints and Limitations
 
-## Phase 5: 成功指標與驗收標準
+**Purpose: Identify system boundaries, external dependencies, and
+technical/business constraints**
 
-**目的：建立清晰的成功定義，幫助後續驗證設計決策**
+1. What regulatory or compliance requirements must be followed?
+2. What external systems does the system need to integrate with?
+3. What are the budget and resource constraints?
+4. Are there any hard deadlines on the timeline?
+5. What technical constraints or preferences exist?
 
-1. 你如何衡量這個產品是否成功？
-2. 有哪些關鍵指標 (KPI) 需要追蹤？
-3. 上線後多久會檢視成果？
-4. 什麼情況下你會認為需要重大調整？
-5. 用戶的成功長什麼樣子？
+**Follow-up techniques:**
 
-**追問技巧：**
-- "這個指標的目標值是多少？" - 量化期望
-- "如何收集這些數據？" - 理解測量機制
-- "有沒有領先指標可以提早預測？" - 找出早期信號
+- "Is this constraint negotiable?" - Distinguish hard vs. soft constraints
+- "What risks arise if this constraint is broken?" - Understand severity
+- "Are there alternatives?" - Explore flexibility
 
-## 訪談後整理重點
+## Phase 5: Success Metrics and Acceptance Criteria
 
-根據 PM 訪談，應該能識別：
+**Purpose: Establish clear definitions of success to help validate design
+decisions later**
 
-1. **核心域** (Core Domain) - 產品的競爭優勢，業務最關心的部分
-2. **支撐域** (Supporting Subdomain) - 必要但不是差異化的功能
-3. **通用域** (Generic Subdomain) - 可以用現成解決方案的部分
-4. **Bounded Context 候選** - 根據業務能力和功能群組識別的邊界
-5. **關鍵業務規則** - 影響設計決策的重要約束
+1. How do you measure whether this product is successful?
+2. What key performance indicators (KPIs) need to be tracked?
+3. How soon after launch will you review results?
+4. Under what circumstances would you consider a major adjustment necessary?
+5. What does success look like for the user?
 
-記住：PM 提供的是業務視角，需要與領域專家和終端用戶的訪談交叉驗證。
+**Follow-up techniques:**
+
+- "What is the target value for this metric?" - Quantify expectations
+- "How will this data be collected?" - Understand measurement mechanisms
+- "Are there leading indicators that can predict outcomes early?" - Identify early signals
+
+## Post-Interview Summary
+
+From the PM interview, you should be able to identify:
+
+1. **Core Domain** - The product's competitive advantage; what the business cares about most
+2. **Supporting Subdomains** - Necessary but not differentiating features
+3. **Generic Subdomains** - Parts that can use off-the-shelf solutions
+4. **Bounded Context Candidates** - Boundaries identified from business capabilities and feature groups
+5. **Key Business Rules** - Important constraints that affect design decisions
+
+Remember: The PM provides a business perspective. This needs to be
+cross-validated with domain expert and end user interviews.
